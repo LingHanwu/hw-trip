@@ -1,8 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-// 引入样式重置文件
-import 'normalize.css'
-import './assets/css/reset.css'
+// 引入样式文件
+import './assets/css/index.css'
 
 
 createApp(App).mount('#app')
