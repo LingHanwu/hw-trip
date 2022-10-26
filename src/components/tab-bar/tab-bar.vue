@@ -1,34 +1,16 @@
 <script setup>
-
+import { ref } from 'vue'
+const active = ref(0);
 </script>
-
 <template>
-  <div class="tab-bar">
-    <div class="tab-bar-item">
-      <span>首页</span>
-    </div>
-    <div class="tab-bar-item">收藏</div>
-    <div class="tab-bar-item">订单</div>
-    <div class="tab-bar-item">消息</div>
-  </div>
+  <van-tabbar v-model="active">
+    <van-tabbar-item icon="home-o">首页</van-tabbar-item>
+    <van-tabbar-item icon="like-o">收藏</van-tabbar-item>
+    <van-tabbar-item icon="orders-o">订单</van-tabbar-item>
+    <van-tabbar-item icon="chat-o">消息</van-tabbar-item>
+  </van-tabbar>
 </template>
 
 <style lang="less" scoped>
-.tab-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
-  display: flex;
 
-  border-top: 1px solid orange;
-
-  .tab-bar-item {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 </style>
