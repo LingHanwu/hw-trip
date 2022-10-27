@@ -6,9 +6,23 @@ import homeNarBar from './navBar/homeNavBar.vue'
   <div class="home">
     <!-- 导航栏 -->
     <homeNarBar></homeNarBar>
+    <!-- 轮播 -->
     <div class="banner">
-      <img src="@/assets/img/home/banner.webp" alt="banner">
+      <var-swipe class="swipe-banner" :loop="false">
+        <var-swipe-item>
+          <img class="swipe-banner-image" src="@/assets/img/home/banner.webp">
+        </var-swipe-item>
+        <var-swipe-item>
+          <img class="swipe-banner-image" src="https://varlet.gitee.io/varlet-ui/cat2.jpg">
+        </var-swipe-item>
+        <var-swipe-item>
+          <img class="swipe-banner-image" src="https://varlet.gitee.io/varlet-ui/cat3.jpg">
+        </var-swipe-item>
+      </var-swipe>
     </div>
+
+
+
 
 
     <div class="location">
@@ -23,11 +37,24 @@ import homeNarBar from './navBar/homeNavBar.vue'
 </template>
 
 <style lang="less" scoped>
+// 轮播start
 .banner {
-  img {
-    width: 100%;
+  .swipe-banner {
+    height: 160px;
   }
+
+  .swipe-banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
 }
+
+// 轮播end
+
+
 
 .location {
   display: flex;
