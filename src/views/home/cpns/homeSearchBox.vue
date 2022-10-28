@@ -1,6 +1,10 @@
 <script setup>
+import { useRouter } from 'vue-router';
+
+
+const router = useRouter
 const cityClick = () => {
-  console.log('111')
+  router.push("/city")
 }
 
 
@@ -13,7 +17,7 @@ const positionClick = () => {
   navigator.geolocation.getCurrentPosition(res => {
     console.log('获取位置成功：', res);
   }, err => {
-    console.log('获取位置失败：', res);
+    console.log('获取位置失败：', err);
   }, {
     enableHighAccuracy: true, // 高精度
     timeout: 5000,    // 超时时间
